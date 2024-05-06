@@ -1,7 +1,23 @@
-import React from "react";
+
 import { View, Button, TextInput, Text } from "react-native";
+import React, { UseState, useState } from "react";
 
 export default function Form(){
+
+    const [altura, setAltura] = useState(null)
+    const [peso, setPeso] = useState(null)
+    const [messageIMC, setMessageImc] = useState("digite seu peso e altura");
+    const [imc, setImc] = useState(null)
+    const [textButton, setTextButton] = useState("CALCULAR IMC ")
+
+    function imcCalculator(){
+        return setImc((peso/(altura*altura)).toFixed(2))
+    }
+
+
+
+
+
     return(
         <View>
             <View>
@@ -17,7 +33,7 @@ export default function Form(){
                 keyboardType="numeric"
                 />
 
-                <Button title="Calcular"/>
+                <Button title={textButton}/>
 
             </View>
         </View>
