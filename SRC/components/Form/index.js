@@ -1,7 +1,7 @@
 
 import { View, Button, TextInput, Text } from "react-native";
 import React, { UseState, useState } from "react";
-
+import ResultImc from "./ResultImc";
 export default function Form(){
 
     const [altura, setAltura] = useState(null)
@@ -49,6 +49,10 @@ export default function Form(){
                 <Button title={textButton}/>
 
             </View>
+            <ResultImc
+            messageImc={messageIMC}
+            resultImc={imc}
+            />
         </View>
     );
 }
