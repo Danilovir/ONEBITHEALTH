@@ -53,15 +53,12 @@ export default function Form(){
                 />
 
                 <Button 
-                onPress={() => validation}
+                onPress={() => validation()}
                 title={textButton}
                 color="#61dafb"/>
 
             </View>
-            <ResultImc
-            messageResultImc={messageIMC}
-          ResultImc={imc}
-            />
+            <ResultImc messageResultImc={messageIMC} resultImc={imc}/>
         </View>
     );
 }
