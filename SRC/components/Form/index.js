@@ -11,6 +11,7 @@ export default function Form(){
     const [messageIMC, setMessageImc] = useState("digite seu peso e altura");
     const [imc, setImc] = useState(null)
     const [textButton, setTextButton] = useState("CALCULAR IMC ")
+    const [reultado, setResultado] = useState(null)
 
     function imcCalculator(){
         return setImc((peso/(altura*altura)).toFixed(2))
@@ -30,6 +31,7 @@ export default function Form(){
         setMessageImc("Preencha Peso E Altura")
     }
 
+ 
 
 
 
@@ -58,7 +60,9 @@ export default function Form(){
                 color="#61dafb"/>
 
             </View>
-            <ResultImc messageResultImc={messageIMC} resultImc={imc}/>
+            <ResultImc messageResultImc={messageIMC} resultImc={imc} />
+
+            
         </View>
     );
 }
